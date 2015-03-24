@@ -246,7 +246,7 @@ module ActiveModel
       end
 
       # This is necessary because `changed_attributes` might be overridden in
-      # other implemntations (e.g. in `ActiveRecord`)
+      # other implementations (e.g. in `Active Record`)
       alias_method :attributes_changed_by_setter, :changed_attributes # :nodoc:
 
       # Force an attribute to have a particular "before" value

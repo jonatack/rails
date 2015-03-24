@@ -25,7 +25,7 @@ namespace :test do
   end
 
   namespace :integration do
-    desc 'ActiveRecord Integration Tests'
+    desc 'Active Record Integration Tests'
     Rake::TestTask.new(:active_record) do |t|
       t.libs << 'test'
       t.test_files = Dir.glob("test/activerecord/*_test.rb")

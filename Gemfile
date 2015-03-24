@@ -114,7 +114,7 @@ platforms :rbx do
   gem 'psych', '~> 2.0'
 end
 
-# gems that are necessary for ActiveRecord tests with Oracle database
+# gems that are necessary for Active Record tests with Oracle database
 if ENV['ORACLE_ENHANCED']
   platforms :ruby do
     gem 'ruby-oci8', '~> 2.1'
@@ -122,5 +122,5 @@ if ENV['ORACLE_ENHANCED']
   gem 'activerecord-oracle_enhanced-adapter', github: 'rsim/oracle-enhanced', branch: 'master'
 end
 
-# A gem necessary for ActiveRecord tests with IBM DB
+# A gem necessary for Active Record tests with IBM DB
 gem 'ibm_db' if ENV['IBM_DB']

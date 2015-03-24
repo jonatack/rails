@@ -36,7 +36,7 @@ class ActiveRecordTestConnector
         self.connected = true
       end
     rescue Exception => e  # errors from ActiveRecord setup
-      $stderr.puts "\nSkipping ActiveRecord assertion tests: #{e}"
+      $stderr.puts "\nSkipping Active Record assertion tests: #{e}"
       #$stderr.puts "  #{e.backtrace.join("\n  ")}\n"
       self.able_to_connect = false
     end
@@ -53,7 +53,7 @@ class ActiveRecordTestConnector
 
           Object.send(:const_set, :QUOTED_TYPE, ActiveRecord::Base.connection.quote_column_name('type')) unless Object.const_defined?(:QUOTED_TYPE)
         else
-          raise "Can't setup connection since ActiveRecord isn't loaded."
+          raise "Can't setup connection since Active Record isn't loaded."
         end
       end
 
